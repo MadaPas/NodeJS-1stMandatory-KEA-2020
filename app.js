@@ -4,13 +4,95 @@ const express = require("express");
 // set up the server instance
 const app = express();
 
+
+app.use(express.urlencoded({
+    extended: false
+}));
+
+// parse application/json
+app.use(express.json());
+
+
+let students = require("./data");
+//students "api"
+app.get("/api", (req, res) => {
+    return res.send({
+        response: "Students API version 0.0.1"
+    });
+});
+//get all students
+app.get("/api/students", (req, res) => {
+    return res.send({
+        response: students
+    })
+});
+//get student by id
+app.get("/api/students/:id", (req, res) => {
+    const student = students.find(student => student.id === Number(req.params.id));
+    return res.send({
+        response: student
+    });
+});
+
+//POST
+app.post("/api/students", (req, res) => {
+    let newStudent = req.body;
+    newStudent.id = ++currentId;
+    students.push(newStudent);
+
+    return res.send({
+        response: {}
+    });
+});
+
+//PUT
+app.put('/api/students/:id', (req, res) => {
+    let id = Number(req.params.id);
+
+    const foundIndex = students.findIndex(student =>
+        student.id === id)
+
+    const updatedStudent = {
+        ...students[foundIndex],
+        ...req.body
+    }; //create a new object qith all the key values 
+    students[foundIndex] = updatedStudent;
+
+    delete req.body.id;
+
+    students[foundIndex] = updatedStudent;
+
+    return res.send({
+        response: students
+    });
+    // return res.send({response: students});
+
+});
+
+//DELETE
+app.delete("/api/students/:id", (req, res) => {
+
+    let id = Number(req.params.id);
+
+    students = students.filter(student => {
+        return student.id !== id;
+    });
+    return res.send({
+        response: students
+    });
+});
+
+
+
+
+
 //set the server to use static as a static folder
 app.use(express.static('static'));
 
-
 // sending the html index file 
 // --> the root route is requested
-app.get("/", (req, res) =>{
+//frontpage
+app.get("/", (req, res) => {
     return res.sendFile(__dirname + "/static/html/index.html");
 });
 
@@ -53,17 +135,18 @@ app.get("/callback", (req, res) => {
 app.get("/postman", (req, res) => {
     return res.sendFile(__dirname + "/static/html/content/postman.html");
 });
+//myAPIpage
+app.get("/myapi", (req, res) => {
+    return res.sendFile(__dirname + "/static/html/my_api/myapi.html");
+});
 
 
 
-const port = process.env.port ? process.env.port : 3000;
+const port = process.env.PORT ? process.env.PORT : 3000;
 
-// listen on port 3000, logging possible errors
-app.listen(port, error => {
-
-    if (error) 
-    {
-        console.log("Error occured! Error:", error);
+const server = app.listen(port, (error) => {
+    if (error) {
+        console.log("Error starting the server");
     }
-    console.log("Server is running on port", port);
+    console.log("This server is running on port", server.address().port);
 });

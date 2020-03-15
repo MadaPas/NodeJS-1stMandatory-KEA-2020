@@ -1,0 +1,17 @@
+I walked through the basics of API design, learning how to set up the backbone of a REST API and how to structure the code in a logical manner.
+<br>
+I learned how to use basic implementation of CommonJS.
+<br><br>
+Firstly, I needed to set up and install the required dependencies and node modules for the app to work correctly.
+<br>
+As I created an API, it’s obvious a database was needed. I used MongoDB, a NOSQL database. 
+
+<br>
+It was the optimal choice for my needs at the moment as I did not need a relational database. :)
+
+mongodb+srv://madapas:<madapas>@cluster1-d8f0f.mongodb.net/test?retryWrites=true&w=majority
+
+
+Mongoose is an ORM — Object Relational Mapper. The official ORM used for MongoDB to be precise. 
+I used use an ORM to simplify the transfer of data between our application and the database. 
+ORM maps the data I have in my app to uphold a set of strict rules set by the database. The body-parser module is just a middleware we use to parse our data sent through HTTP requests.
