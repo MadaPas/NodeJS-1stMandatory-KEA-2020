@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <div class="page-container">
+        <div class="content-wrap">
+            <!--Navbar fragment-->
+            <div id="navbar-fragment"></div>
+            <h4 class="doc-lead">NodeJS</h4>
+
+            <p class="lead">
+                Node.js is an open source, cross-platform runtime environment for developing server-side and networking
+                applications. Node.js applications are written in JavaScript, and can be run within the Node.js runtime
+                on OS X, Microsoft Windows, and Linux.
+                <br>
+                Node.js also provides a rich library of various JavaScript modules which simplifies the development of
+                web applications using Node.js to a great extent.
+            </p>
+            <h4 class="doc-lead">WHAT can NodeJS do? </h4>
+            <p class="lead">
+                Node.js can generate dynamic page content<br>
+                Node.js can create, open, read, write, delete, and close files on the server<br>
+                Node.js can collect form data<br>
+                Node.js can add, delete, modify data in your database</p>
+            </p class="lead">
+            <h4 class="doc-lead">Extra information</h4>
+            <p class="lead">
+                Node has a built tool called <b>npm</b> which stands for Node Package Manager. With this we can easily
+                install modules to use for easy development. Framework modules can be found on <a
+                    href="https://www.npmjs.com/">npmjs.com</a>.<br>
+                To install a module first create a json file named package.json, then run the following command in your
+                project’s folder:<br>
+                <b>npm install [module name]</b><br>
+                This will generate a node_modules folder with all modules in it and it will update the package.json file
+                where it’s possible to see all dependencies.<br>
+                You can also manually add them to the package file.<br>
+                After that, you will need to run <b>npm install</b> in your command line. <br>
+                And finally, to run your project, you can simply run <b>node [name of js file]</b> in your command line.
+                <br>
+                Consider using <a href="/nodemon">Nodemon</a> for an easier and better execution.<br>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Footer fragment-->
+    <!-- <div id="footer-fragment"></div> -->
+
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#navbar-fragment').load('../html/fragments/navbar.html')
+            $('#footer-fragment').load('../html/fragments/footer.html')
+        })
+    </script>
+
+</body>
+
+</html>

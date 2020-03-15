@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postman</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <div class="page-container">
+        <div class="content-wrap">
+            <!--Navbar fragment-->
+            <div id="navbar-fragment"></div>
+
+
+<h4 class="doc-lead">Postman</h4>
+
+<p class="lead">
+  Postman is a powerful tool for performing integration testing with your API. It allows for repeatable, reliable tests that can be automated and used in a variety of environments and includes useful tools for persisting data and simulating how a user might actually be interacting with the system.        <br>
+        <table class="table">
+              <tr>
+                <th>Verb</th>
+                <th>Example</th>
+                <th>Details</th>
+              </tr>
+            <tbody>
+              <tr>
+                <td>GET</td>
+                <td>/collection/id</td>
+                <td>Receiving the information.<br>
+              </tr>
+              <tr>
+                <td>POST</td>
+                <td>/collection</td>
+                <td>Adding an item to a collection. <br>
+              </tr>
+              <tr>
+                <td>PUT</td>
+                <td>/collection/id</td>
+                <td>Updating an item in a collection.
+              </td>
+              </tr>
+              <tr>
+                <td>DELETE</td>
+                <td>/collection/id</td>
+                <td>Deleting an item in a collection.</td>
+              </tr>
+            </tbody>
+          </table>
+    </p>
+    <p class="lead">
+      This <a href="https://www.codementor.io/@equimper/testing-your-api-with-postman-4tuwpkswp">website</a> 
+      shows a nice demonstration about testing your API with Postman.
+      First, it creates a simple test controller in an app where you can fetch a unique post with the ID as params.
+      Then, demonstrates how to write tests in Postman.
+    </p>
+          For more about APIs, see <a href="/restapi">API</a>. <br>
+  </div>
+</div>
+
+
+<!--Footer fragment-->
+<div id="footer-fragment"></div>
+
+<!--Scripts-->
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#navbar-fragment').load('../html/fragments/navbar.html')
+        $('#footer-fragment').load('../html/fragments/footer.html')
+    })
+</script>
+
+</body>
+
+</html>

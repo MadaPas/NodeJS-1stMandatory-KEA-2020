@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS 2020 KEA</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <div id="page-container">
+
+        <!--Navbar fragment-->
+        <div id="navbar-fragment"></div>
+
+        <div id="content-wrap">
+            <!--Content begin-->
+            
+            <div class="container">
+                <div>
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="display">NodeJS 2020</h1>
+                            <p class="lead">Mandatory assignment for NodeJS course at KEA by <a href="https://github.com/MadaPas">MadaPas</a></p>
+                            <p class="lead">
+                                This is a documentation for what I have learned about Node.js and web development so far. <br>
+                                Consideting that this is my first interaction with Node and Javascript, the app is quite simple implemented.
+                            
+                                Using the navigation-bar, you can navigate to some theory chapters that I covered xd. <br>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="display">Some more information</h1>
+                            <p class="lead">Click below for some more details about the assignment.</p>
+                            <p class="lead">
+                                <b>Deadline:</b> Sunday March the 15th - 23:59<br>
+                                <b>Hand-in:</b> Fronter</p>
+                            <a class="btn btn-primary" href="/about" role="button">About</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Content end-->
+        </div>
+    </div>
+            <!--Footer fragment-->
+        <div id="footer-fragment"></div>
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#navbar-fragment').load('../html/fragments/navbar.html')
+            $('#footer-fragment').load('../html/fragments/footer.html')
+        })
+    </script>
+
+</body>
+</html>

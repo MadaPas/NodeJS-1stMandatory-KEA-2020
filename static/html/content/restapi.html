@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST APIs</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <div class="page-container">
+        <div class="content-wrap">
+            <!--Navbar fragment-->
+            <div id="navbar-fragment"></div>
+            <h4 class="doc-lead">REST APIs</h4>
+
+            <p class="lead">
+                <b>RE</b>presentational <b>S</b>tate <b>T</b>ransfer <b>(REST)</b> is an architectural style that
+                defines a set of constraints to be used for creating web services.
+                REST API is a way of accessing the web services in a simple and flexible way without having any
+                processing.<br>
+
+                REST technology is generally preferred to the more robust Simple Object Access Protocol (SOAP)
+                technology because REST uses the less bandwidth,
+                simple and flexible making it more suitable for internet usage. It’s used to fetch or give some
+                information from a web services.
+                All communication done via REST API used only HTTP request.<br>
+                A request is send from client to server in the form of web URL as HTTP GET or POST or PUT or DELETE.
+                After that a response is come back from server in the form of resource which can be anything like HTML,
+                XML, Image or JSON.
+                But now JSON is the most popular format being used in Web Services.<br>
+
+                In HTTP there are five methods which are commonly used in a REST based Architecture i.e., POST, GET,
+                PUT, PATCH, and DELETE. These correspond to create, read, update, and delete (or CRUD) operations
+                respectively.
+                <br>
+                <b>There are other methods which are less frequently used like OPTIONS and HEAD.</b> <br>
+            </p>
+            <p class="lead">
+
+                <b>1. GET</b>: The HTTP GET method is used to <b>read</b> (or retrieve) a representation of a resource.
+                In the safe path, GET returns a representation in XML or JSON and an HTTP response code of 200 (OK). In
+                an error case, it most often returns a 404 (NOT FOUND) or 400 (BAD REQUEST).
+                <br><br>
+                <b>2. POST</b>: The POST verb is most-often utilized to <b>create</b> new resources. In particular, it’s
+                used to create subordinate resources. That is, subordinate to some other (e.g. parent) resource. On
+                successful creation, return HTTP status 201, returning a Location header with a link to the
+                newly-created resource with the 201 HTTP status.
+                <br>
+                <b>NOTE: POST is neither safe nor idempotent.</b>
+                <br><br>
+                <b>3. PUT</b>: It is used for <b>updating</b> the capabilities. However, PUT can also be used to create
+                a resource in the case where the resource ID is chosen by the client instead of by the server. In other
+                words, if the PUT is to a URI that contains the value of a non-existent resource ID. On successful
+                update, return 200 (or 204 if not returning any content in the body) from a PUT. If using PUT for
+                create, return HTTP status 201 on successful creation. PUT is not safe operation but it’s idempotent.
+                <br><br>
+                <b>4. PATCH</b>: It is used for <b>modifying</b> capabilities. The PATCH request only needs to contain
+                the changes to the resource, not the complete resource. This resembles PUT, but the body contains a set
+                of instructions describing how a resource currently residing on the server should be modified to produce
+                a new version. This means that the PATCH body should not just be a modified part of the resource, but in
+                some kind of patch language like JSON Patch or XML Patch. PATCH is neither safe nor idempotent.
+                <br><br>
+                <b>5. DELETE</b>: It is used to <b>delete</b> a resource identified by a URI. On successful deletion,
+                return HTTP status 200 (OK) along with a response body.
+            </p>
+
+            <p class="lead">
+                <b>Idempotence</b>: An idempotent HTTP method is a HTTP method that can be called many times without
+                different outcomes. It would not matter if the method is called only once, or ten times over. The result
+                should be the same. Again, this only applies to the result, not the resource itself.
+            </p>
+            Related to APIs, see <a href="/postman">Postman</a>.
+        </div>
+    </div>
+
+
+    <!--Footer fragment-->
+    <!-- <div id="footer-fragment"></div> -->
+
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#navbar-fragment').load('../html/fragments/navbar.html')
+            $('#footer-fragment').load('../html/fragments/footer.html')
+        })
+    </script>
+
+</body>
+
+</html>

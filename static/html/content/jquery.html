@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <div class="page-container">
+        <div class="content-wrap">
+            <!--Navbar fragment-->
+            <div id="navbar-fragment"></div>
+            <h4 class="doc-lead">jQuery</h4>
+
+            <p class="lead">
+                jQuery is an open source JavaScript library that simplifies the interactions between an HTML/CSS
+                document, or more precisely the Document Object Model (DOM), and JavaScript.
+                Elaborating the terms, jQuery simplifies HTML document traversing and manipulation, browser event
+                handling, DOM animations, Ajax interactions, and cross-browser JavaScript development.
+                <br>
+                <b>Note:</b> The only library available today that meets the needs of both designer types and programmer
+                types is jQuery.
+            </p>
+            <h4 class="doc-lead"> WHY jQuery?</h4>
+            <p class="lead">
+                It is incredibly popular, which is to say it has a large community of users and a healthy amount of
+                contributors who participate as developers and evangelists.
+                <br>
+                It normalizes the differences between web browsers so that you don’t have to.
+                <br>
+                It is intentionally a lightweight footprint with a simple yet clever plugin architecture.
+                <br>
+                Its repository of plugins is vast and has seen steady growth since jQuery’s release.
+                <br>
+                Its API is fully documented, including inline code examples, which in the world of JavaScript libraries
+                is a luxury. Heck, any documentation at all was a luxury for years.
+                <br>
+                It is friendly, which is to say it provides helpful ways to avoid conflicts with other JavaScript
+                libraries.
+                <br><br>
+                jQuery is widely famous with its philosophy of “Write less, do more.” This philosophy can be further
+                elaborated as three concepts:<br>
+
+                <p class="lead">
+                    <b>
+                        1. Finding some elements (via CSS selectors) and doing something with them (via jQuery methods)
+                            i.e. locate a set of elements in the DOM, and then do something with that set of elements.<br>
+                        2. Chaining multiple jQuery methods on a set of elements<br>
+                        3. Using the jQuery wrapper and implicit iteration<br>
+                    </b>
+                </p>
+            </p>
+            <img src="./images/jquery.JPG" alt="jQuery example"></img>
+        </div>
+    </div>
+
+    <!--Footer fragment-->
+    <!-- <div id="footer-fragment"></div> -->
+
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#navbar-fragment').load('../html/fragments/navbar.html')
+            $('#footer-fragment').load('../html/fragments/footer.html')
+        })
+    </script>
+
+</body>
+
+</html>

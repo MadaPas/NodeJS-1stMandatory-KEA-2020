@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+
+    <div class="page-container">
+        <div class="content-wrap">
+
+            <!--Navbar fragment-->
+            <div id="navbar-fragment"></div>
+            <h4 class="doc-lead">Express</h4>
+            <p class="lead">Express.js is a Node js web application server framework, which is specifically designed for
+                building single-page, multi-page, and hybrid web applications.</p>
+            <section>
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-sm-4">
+                            <div>
+                                <div class="content">
+                                    <h4 class="doc-lead">Web Applications</h4>
+                                    <p class="lead">Express is a minimal and flexible Node.js web application framework
+                                        that provides a robust set of features for web and mobile applications.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div>
+                                <div class="content">
+                                    <h4 class="doc-lead">APIs</h4>
+                                    <p class="lead">With a myriad of HTTP utility methods and middleware at our
+                                        disposal, creating a robust API is quick and easy.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div>
+                                <div class="content">
+                                    <h4 class="doc-lead">Performance</h4>
+                                    <p class="lead">Express provides a thin layer of fundamental web application
+                                        features, without obscuring Node.js features.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="content">
+                    <h4 class="doc-lead text-center">Frameworks</h4>
+                    <p class="lead text-center">Many popular frameworks are based on Express.</p>
+                </div>
+            </section>
+            <p class="lead">
+                It has become the standard server framework for node.js. Express is the backend part of something known
+                as the MEAN stack.<br>
+                The MEAN is a free and open-source JavaScript software stack for building dynamic web sites and web
+                applications which has the following components:<br>
+                1. <b>MongoDB</b> - The standard NoSQL database
+                <br>
+                2. <b>Express.js</b> - The default web applications framework
+                <br>
+                3. <b>Angular.js</b> - The JavaScript MVC framework used for web applications
+                <br>
+                4. <b>Node.js</b> - Framework used for scalable server-side and networking applications
+                <br>
+            </p>
+        </div>
+    </div>
+    <div class="page-container">
+        <div class="content-wrap">
+
+            <!--Navbar fragment-->
+            <div id="navbar-fragment"></div>
+            <h4 class="doc-lead">Express Usage</h4>
+            <p class="lead">The Express.js framework makes it very easy to develop an application which can be used to
+                handle multiple types of requests like the GET, PUT, and POST and DELETE requests.</p>
+
+            <p class="lead">
+                Express gets installed via the Node Package Manager. This can be done by executing the following line in
+                the command line: <br>
+                <b>npm install express</b> <br>
+                The above command requests the Node package manager to download the required express modules and install
+                them accordingly. <br>
+                Let's use our newly installed Express framework and create a simple "Hello World" application. <br>
+                Our application is going to create a simple server module which will listen on port number 3000. In our
+                example, if a request is made through the browser on this port number, then server application will send
+                a 'Hello' World' response to the client.
+            </p>
+            <img src="./images/express.JPG" alt="How to use express" width="700" height="300"></img>
+
+            <p class="lead">
+                1. In our first line of code, we are using the require function to include the "express module."
+                <br>
+                2. Before we can start using the express module, we need to make an object of it.
+                <br>
+                3. Here we are creating a callback function. This function will be called whenever anybody browses to
+                the root of our web application which is http://localhost:3000 . The callback function will be used to
+                send the string 'Hello World' to the web page.
+                <br>
+                4. In the callback function, we are sending the string "Hello World" back to the client. The 'res'
+                parameter is used to send content back to the web page. This 'res' parameter is something that is
+                provided by the 'request' module to enable one to send content back to the web page.
+                <br>
+                5. We are then using the listen to function to make our server application listen to client requests on
+                port no 3000. You can specify any available port over here.
+                <br>
+            </p>
+
+            <h4 class="doc-lead">What are Routes?</h4>
+            <p class="lead">
+                Routing determine the way in which an application responds to a client request to a particular endpoint.
+                <br>
+                For example, a client can make a GET, POST, PUT or DELETE http request for various URL such as the ones
+                shown below: <br>
+                <h><b>
+                    http://localhost:3000/Books<br>
+                    http://localhost:3000/Students</b></h><br><br>
+                    If a GET request is made for the first URL, then the response should ideally be a list of books.<br>
+                    If the GET request is made for the second URL, then the response should ideally be a list of Students.<br>
+                    So based on the URL which is accessed, a different functionality on the webserver will be invoked, and accordingly, the response will be sent to the client. This is the concept of routing.<br>
+            </p>
+            For more detailed information about requests, see <a href="/restapi">API</a>. <br>
+
+        </div>
+    </div>
+
+
+    <!-- Footer fragment -->
+    <!-- <div id="footer-fragment"></div> -->
+
+
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script src="./index.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#navbar-fragment').load('../html/fragments/navbar.html')
+            $('#footer-fragment').load('../html/fragments/footer.html')
+        })
+    </script>
+
+</body>
+
+</html>

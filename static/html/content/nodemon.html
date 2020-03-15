@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <div class="page-container">
+        <div class="content-wrap">
+            <!--Navbar fragment-->
+            <div id="navbar-fragment"></div>
+            <h4 class="doc-lead">Nodemon</h4>
+            <p class="lead">
+                Nodemon is a tool that helps develop node.js based applications by automatically restarting the node
+                application when file changes in the directory are detected.<br>
+                Nodemon does not require any additional changes to your code or method of development. It is a
+                replacement wrapper for node, to use <b>nodemon</b> replace the word <b>node</b> on the command line
+                when executing your script.<br>
+                With nodemon you only need to start your app once and then it will restart the app every time there has
+                been a change in the code. <br>
+                <p class="text-centered">
+                    *** Install it globally with the following command: ***
+                </p>
+                <b>npm install nodemon -g</b>
+            </p>
+        </div>
+    </div>
+
+
+    <!--Footer fragment-->
+    <div id="footer-fragment"></div>
+
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#navbar-fragment').load('../html/fragments/navbar.html')
+            $('#footer-fragment').load('../html/fragments/footer.html')
+        })
+    </script>
+
+</body>
+
+</html>
